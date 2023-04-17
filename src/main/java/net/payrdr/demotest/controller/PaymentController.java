@@ -28,6 +28,8 @@ public class PaymentController {
             accFrom.setSum(oldAccFromSum - sum);
             Long oldAccToSum = accTo.getSum();
             accTo.setSum(oldAccToSum + sum);
+            accountService.save(accFrom);
+            accountService.save(accTo);
         }
     }
 
