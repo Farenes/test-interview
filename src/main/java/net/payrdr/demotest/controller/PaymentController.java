@@ -26,7 +26,7 @@ public class PaymentController {
         if (accFrom != null && accTo != null && accFrom.getSum() >= sum) {
             Long oldAccFromSum = accFrom.getSum();
             accFrom.setSum(oldAccFromSum - sum);
-            Long oldAccToSum = accFrom.getSum();
+            Long oldAccToSum = accTo.getSum();
             accTo.setSum(oldAccToSum + sum);
         }
     }
